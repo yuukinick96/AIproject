@@ -1,0 +1,267 @@
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: serif;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow:hidden;
+}
+
+
+.window {
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 800px;
+}
+
+.chatarea {
+    height: 100%;
+}
+ .top-bar {
+    height: 55px;
+    background-color: #1b5916;
+    color: #fff;
+    padding: 0 8px;
+    font-size: 24px;
+}
+
+ .top-bar:after {
+    content: "";
+    display: table;
+}
+
+.top-bar .user {
+    margin: 0 0 0 8px;
+    width: 36px;
+    height: 36px;
+}
+
+.top-bar .user img {
+    display: block;
+    width: 90%;
+}
+
+.top-bar .user-name h4{
+    font-size: 16px;
+    position:relative;
+    margin: 0 0 0 8px;
+    text-overflow: ellipsis;
+    color: #fff;
+    left: 50px;
+    top: -15px;
+}
+
+.chat-window {
+    height: calc(100% - 152px);
+    position: relative;
+    background: url("https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000");    
+    background-size: cover;
+    box-shadow: inset 0 10px 10px -10px #000000;
+}
+
+.chat-window:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.chat-window .conversation {
+    width: 100%;
+    overflow: auto;
+    height: calc(100% - 68px);
+    padding: 0 16px;
+}
+
+.chat-window .conversation:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.chat-window .balloon {
+    padding: 8px;
+    position: relative;
+    color: #000;
+    font-size: 14px;
+    line-height: 18px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    clear: both;
+    margin: 8px 0;
+    max-width: 85%;
+}
+
+.chat-window .balloon:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.wa-container .chat-window .balloon .data {
+    display: inline-block;
+/*     padding: 0 20px 0 16px; */
+    font-size: 11px;
+    color: #b9b9b9;
+    position: relative;
+    bottom: -5px;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: right 3px;
+    background-color: transparent;
+    background-size: 16px auto;
+}
+
+
+
+.wa-container .chat-window .balloon:first-child {
+    margin: 16px 0 8px;
+}
+ /* AI chat meesage bubble */
+.wa-container .chat-window .balloon.him {
+    background: #fff;
+    float: left;
+    border-radius: 0px 5px 5px 5px;
+}
+
+.wa-container .chat-window .balloon.him .data {
+    padding: 0 0 0 16px;
+}
+
+.wa-container .chat-window .balloon.him:after {
+    top: 0;
+    left: -10px;
+    border-width: 0px 10px 10px 0;
+    border-color: transparent #fff transparent transparent;
+}
+ /* User chat meesage bubble */
+.wa-container .chat-window .balloon.you {
+    background: #e1ffc7;
+    float: right;
+    border-radius: 5px 0px 5px 5px;
+}
+
+.wa-container .chat-window .balloon.you:after {
+    top: 0;
+    right: -10px;
+    border-width: 0px 0 10px 10px;
+    border-color: transparent transparent transparent #e1ffc7;
+}
+
+.wa-container .chat-window .textarea {
+    width: 100%;
+    z-index: 2;
+    left: 0;
+    position: absolute;
+    bottom: 0px;
+    height: 50px;
+}
+
+.wa-container .chat-window .textarea:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wa-container .chat-window .textarea ::-webkit-input-placeholder {
+    color: #c93434;
+}
+.wa-container .chat-window .textarea div,
+.wa-container .chat-window .textarea textarea {
+    height: 100%;
+    float: left;
+}
+
+.wa-container .chat-window .textarea textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding-top: 14px;
+    resize: none;
+}
+
+.wrapperchat {
+    height: calc(100% - 81px);
+}
+
+ .wa-container {
+    width: 100%;
+    height: 100%;
+}
+
+.wa-container .chat-window {
+  height: 100%;
+}
+
+.more {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+}
+
+.more a,
+.more a:visited {
+    padding: 10px 20px;
+    color: black;
+    font-size: 24px;
+    background: yellow;
+}
+
+.botName {
+    color: orange;
+}
+
+.userName {
+    color: skyblue;
+}
+
+#userInput {
+  width: 100%;
+  height: 100%;
+  padding-left: 60px;
+  outline: none;
+}
+
+#sendbtn {
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10px;
+  cursor: pointer;
+}
+
+#deal {
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 1022px) {
+    #startbtn {
+        margin-left: 40%;
+        top: 0px;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .reportCard {
+        margin-left: 40%;
+        position: relative;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+}
